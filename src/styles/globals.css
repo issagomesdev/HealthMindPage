@@ -141,3 +141,8 @@
   0%, 100% { box-shadow: 0 0 20px rgba(0, 104, 93, 0.3); }
   50% { box-shadow: 0 0 40px rgba(0, 104, 93, 0.6), 0 0 60px rgba(0, 104, 93, 0.3); }
 }
+
+@keyframes modal-in {
+  from { opacity: 0; transform: translateY(12px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)    scale(1);    }
+}

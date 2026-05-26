@@ -81,7 +81,7 @@ export default function AppHighlights() {
   return (
     <section
       id="app-highlights"
-      className="py-16 bg-surface-container-low overflow-hidden relative"
+      className="py-16 bg-surface-container-low overflow-hidden relative scroll-mt-[60px]"
     >
       {/* Background decoration */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-72 h-72 bg-primary/5 rounded-full blur-3xl pointer-events-none" />

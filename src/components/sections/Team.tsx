@@ -36,7 +36,7 @@ export default function Team() {
   return (
     <section
       id="equipe"
-      className="py-16 overflow-hidden section-gradient-light"
+      className="py-16 overflow-hidden section-gradient-light scroll-mt-[60px]"
     >
       <div className="max-w-[1300px] mx-auto px-container-margin">
         <SectionHeader
@@ -48,7 +48,7 @@ export default function Team() {
         />
 
         {/* First row: 3 cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
           {firstThree.map((member) => {
             const colors = colorConfig[member.color]
             return (

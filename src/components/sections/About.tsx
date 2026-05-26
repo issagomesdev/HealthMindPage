@@ -3,70 +3,41 @@ import { FloatingWidget } from '@/components/ui/FloatingWidget'
 import { PhoneMockup } from '@/components/ui/PhoneMockup'
 import { aboutFeatures } from '@/data/about'
 
-const ABOUT_PHONE =
-  '/images/mockups/professional/message.png'
+const ABOUT_PHONE = '/images/mockups/professional/message.png'
 
 export default function About() {
   return (
-    <section id="about" className="py-16 bg-white overflow-hidden">
+    <section id="about" className="py-16 bg-white overflow-hidden scroll-mt-[60px]">
       <div className="max-w-[1300px] mx-auto px-container-margin">
-        <div className="flex flex-col lg:flex-row items-center gap-10">
+        <div className="flex flex-col lg:flex-row items-center gap-14">
+
           {/* Visual */}
-          <div
-            className="lg:w-1/2 relative flex items-center justify-center order-2 lg:order-1"
-            style={{ minHeight: '480px' }}
-          >
-            {/* Outer ambient glow */}
+          <div className="lg:w-1/2 relative flex items-center justify-center order-2 lg:order-1" style={{ minHeight: '480px' }}>
             <div className="absolute w-[380px] h-[380px] bg-primary-fixed/8 rounded-full blur-[100px] pointer-events-none" />
-            {/* Inner spotlight */}
             <div className="absolute w-[185px] h-[185px] bg-primary-fixed/12 rounded-full blur-[60px] pointer-events-none" />
 
-            {/* Phone mockup */}
             <div className="relative z-10">
-              <PhoneMockup
-                src={ABOUT_PHONE}
-                alt="HealthMind sobre o projeto"
-                size="xl"
-                glowClass="bg-primary-fixed/15"
-              />
+              <PhoneMockup src={ABOUT_PHONE} alt="HealthMind sobre o projeto" size="xl" glowClass="bg-primary-fixed/15" />
 
-              {/* Floating widgets */}
-              <FloatingWidget
-                icon="mood"
-                title="Como você está hoje?"
-                subtitle="Check-in diário"
+              {/* TOP cards: left-0 / right-0 mobile */}
+              <FloatingWidget icon="mood" title="Como você está hoje?" subtitle="Check-in diário"
                 variant="light"
-                className="-left-36 top-12 hidden md:flex"
-                animationDelay="0s"
-                animationDuration="6s"
-              />
-              <FloatingWidget
-                icon="psychology"
-                title="Sessão agendada"
-                subtitle="Amanhã às 14h"
+                className="flex -left-12 sm:-left-16 md:-left-40 -top-6 md:top-12"
+                animationDelay="0s" animationDuration="6s" />
+              <FloatingWidget icon="psychology" title="Sessão agendada" subtitle="Amanhã às 14h"
                 variant="primary"
-                className="-right-32 top-24 hidden md:flex"
-                animationDelay="1s"
-                animationDuration="7s"
-              />
-              <FloatingWidget
-                icon="trending_up"
-                title="Evolução +12%"
-                subtitle="Esta semana"
+                className="flex -right-10 sm:-right-16 md:-right-32 top-16 md:top-24"
+                animationDelay="1s" animationDuration="7s" />
+
+              {/* BOTTOM cards: left-2 / right-2 mobile */}
+              <FloatingWidget icon="trending_up" title="Evolução +12%" subtitle="Esta semana"
                 variant="secondary"
-                className="-left-28 bottom-20 hidden md:flex"
-                animationDelay="1.5s"
-                animationDuration="6.5s"
-              />
-              <FloatingWidget
-                icon="lock"
-                title="100% Seguro"
-                subtitle="Dados criptografados"
+                className="flex -left-10 sm:-left-16 md:-left-28 bottom-12 md:bottom-20"
+                animationDelay="1.5s" animationDuration="6.5s" />
+              <FloatingWidget icon="lock" title="100% Seguro" subtitle="Dados criptografados"
                 variant="light"
-                className="-right-28 bottom-10 hidden md:flex"
-                animationDelay="0.5s"
-                animationDuration="8s"
-              />
+                className="flex -right-6 sm:-right-12 md:-right-28 bottom-4 md:bottom-10"
+                animationDelay="0.5s" animationDuration="8s" />
             </div>
           </div>
 
@@ -84,26 +55,21 @@ export default function About() {
                 importa.
               </p>
             </div>
-
             <div className="grid grid-cols-1 gap-4">
               {aboutFeatures.map((feature) => (
-                <div
-                  key={feature.icon}
-                  className="flex items-start gap-4 p-4 rounded-2xl hover:bg-surface-container-low transition-colors duration-200"
-                >
+                <div key={feature.icon} className="flex items-start gap-4 p-4 rounded-2xl hover:bg-surface-container-low transition-colors duration-200">
                   <div className="w-10 h-10 bg-primary/10 text-primary rounded-xl flex items-center justify-center flex-shrink-0">
                     <span className="material-symbols-outlined text-[20px]">{feature.icon}</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-on-surface text-body-md mb-0.5">
-                      {feature.title}
-                    </h4>
+                    <h4 className="font-semibold text-on-surface text-body-md mb-0.5">{feature.title}</h4>
                     <p className="text-body-sm text-on-surface-variant">{feature.description}</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
+
         </div>
       </div>
     </section>

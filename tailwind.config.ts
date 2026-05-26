@@ -165,7 +165,7 @@ export default {
           },
         },
         '.glass-nav': {
-          background: 'rgba(246, 250, 248, 0.85)',
+          background: 'rgba(246, 250, 248, 0.95)',
           'backdrop-filter': 'blur(20px)',
           '-webkit-backdrop-filter': 'blur(20px)',
           'border-bottom': '1px solid rgba(188, 201, 198, 0.3)',

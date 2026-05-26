@@ -5,7 +5,7 @@ export default function Technology() {
   return (
     <section
       id="technology"
-      className="py-24 overflow-hidden serenity-gradient"
+      className="py-24 overflow-hidden serenity-gradient scroll-mt-[60px]"
     >
       {/* Background orbs */}
       <div className="absolute left-0 top-1/4 w-64 h-64 bg-primary/15 rounded-full blur-3xl pointer-events-none" />
