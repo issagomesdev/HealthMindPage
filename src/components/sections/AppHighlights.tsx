@@ -1,21 +1,82 @@
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import { highlightCards } from '@/data/highlights'
 import { useCarousel } from '@/hooks/useCarousel'
 import { cn } from '@/utils/cn'
 
 export default function AppHighlights() {
-  const { currentIndex, prev, next, goTo } = useCarousel({ total: highlightCards.length })
   const scrollRef = useRef<HTMLDivElement>(null)
+  const [pageCount, setPageCount] = useState(highlightCards.length)
+  const isProgrammatic = useRef(false)
+  const { currentIndex, prev, next, goTo } = useCarousel({ total: pageCount })
 
+  // Calculate number of distinct scroll positions based on container size
   useEffect(() => {
-    if (scrollRef.current) {
-      const card = scrollRef.current.children[currentIndex] as HTMLElement
-      if (card) {
-        card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
-      }
+    const container = scrollRef.current
+    if (!container) return
+
+    const update = () => {
+      const first = container.children[0] as HTMLElement | null
+      const second = container.children[1] as HTMLElement | null
+      if (!first) return
+      // Measure real step from DOM (card width + actual rendered gap)
+      const step = second
+        ? second.getBoundingClientRect().left - first.getBoundingClientRect().left
+        : first.getBoundingClientRect().width
+      const maxScroll = container.scrollWidth - container.clientWidth
+      setPageCount(maxScroll > 0 ? Math.floor(maxScroll / step) + 1 : 1)
     }
-  }, [currentIndex])
+
+    update()
+    const ro = new ResizeObserver(update)
+    ro.observe(container)
+    return () => ro.disconnect()
+  }, [])
+
+  const getStep = () => {
+    const container = scrollRef.current
+    if (!container) return 0
+    const first = container.children[0] as HTMLElement | null
+    const second = container.children[1] as HTMLElement | null
+    if (!first) return 0
+    return second
+      ? second.getBoundingClientRect().left - first.getBoundingClientRect().left
+      : first.getBoundingClientRect().width
+  }
+
+  // Scroll to the correct position when currentIndex changes via buttons/dots
+  useEffect(() => {
+    const container = scrollRef.current
+    if (!container) return
+    const step = getStep()
+    if (!step) return
+    isProgrammatic.current = true
+    container.scrollTo({ left: currentIndex * step, behavior: 'smooth' })
+    setTimeout(() => { isProgrammatic.current = false }, 450)
+  }, [currentIndex]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Update currentIndex when user scrolls manually
+  useEffect(() => {
+    const container = scrollRef.current
+    if (!container) return
+    let debounce: ReturnType<typeof setTimeout>
+
+    const handleScroll = () => {
+      if (isProgrammatic.current) return
+      clearTimeout(debounce)
+      debounce = setTimeout(() => {
+        const step = getStep()
+        if (!step) return
+        goTo(Math.round(container.scrollLeft / step))
+      }, 60)
+    }
+
+    container.addEventListener('scroll', handleScroll, { passive: true })
+    return () => {
+      container.removeEventListener('scroll', handleScroll)
+      clearTimeout(debounce)
+    }
+  }, [goTo])
 
   return (
     <section
@@ -29,7 +90,7 @@ export default function AppHighlights() {
       {/* Dot grid pattern */}
       <div className="absolute inset-0 pointer-events-none opacity-20 dot-grid" />
 
-      <div className="max-w-7xl mx-auto px-container-margin relative">
+      <div className="max-w-[1300px] mx-auto px-container-margin relative">
         <SectionHeader
           badge={{ icon: 'auto_awesome', text: 'Tecnologia & Cuidado Contínuo' }}
           title="Destaques do Projeto"
@@ -58,12 +119,15 @@ export default function AppHighlights() {
               <div
                 key={card.title}
                 className={cn(
-                  'snap-center flex-shrink-0 w-[260px] md:w-[300px] glass-card rounded-3xl p-5 flex flex-col gap-4 transition-all duration-300 cursor-pointer',
-                  index === currentIndex
-                    ? 'ring-2 ring-primary/50 shadow-xl shadow-primary/10'
-                    : 'hover:shadow-lg',
+                  'snap-start flex-shrink-0 w-[260px] md:w-[300px] glass-card rounded-3xl p-5 flex flex-col gap-4 transition-all duration-300 cursor-pointer',
+                  index === currentIndex ? 'ring-2 ring-primary/50' : '',
                 )}
-                onClick={() => goTo(index)}
+                style={{
+                  boxShadow: index === currentIndex
+                    ? '0 12px 40px -8px rgba(0,104,93,0.12)'
+                    : '0 2px 20px rgba(0,0,0,0.04)',
+                }}
+                onClick={() => goTo(Math.min(index, pageCount - 1))}
               >
                 <div
                   className={cn(
@@ -104,9 +168,9 @@ export default function AppHighlights() {
           </button>
         </div>
 
-        {/* Dots */}
+        {/* Dots — one per scroll page, not one per card */}
         <div className="flex items-center justify-center gap-2 mt-8">
-          {highlightCards.map((_, index) => (
+          {Array.from({ length: pageCount }).map((_, index) => (
             <button
               key={index}
               onClick={() => goTo(index)}

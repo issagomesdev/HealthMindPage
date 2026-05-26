@@ -47,36 +47,9 @@ HealtMindPage/
 
 ---
 
-## Como Rodar Localmente (npm)
+## Como Começar 
 
-### Pré-requisitos
-- Node.js 18+ 
-- npm 9+
-
-### Instalação e execução
-
-```bash
-# Instalar dependências
-npm install
-
-# Iniciar servidor de desenvolvimento
-npm run dev
-```
-
-Acesse: [http://localhost:5173](http://localhost:5173)
-
-### Build de produção
-
-```bash
-npm run build
-npm run preview
-```
-
----
-
-## Como Rodar com Docker
-
-### Desenvolvimento
+### Ambiente de Desenvolvimento
 
 ```bash
 # Construir e iniciar o container
@@ -88,7 +61,7 @@ docker-compose up -d --build
 
 Acesse: [http://localhost:5173](http://localhost:5173)
 
-### Produção
+### Ambiente de Produção
 
 ```bash
 # Construir e iniciar com Nginx

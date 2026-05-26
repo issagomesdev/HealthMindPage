@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 w-full z-50 h-14 glass-nav">
-      <div className="max-w-7xl mx-auto px-container-margin h-full flex items-center justify-between">
+      <div className="max-w-[1300px] mx-auto px-container-margin h-full flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 no-underline group">
           <div className="w-9 h-9 bg-primary rounded-xl flex items-center justify-center shadow-md group-hover:shadow-primary/40 transition-shadow duration-300">

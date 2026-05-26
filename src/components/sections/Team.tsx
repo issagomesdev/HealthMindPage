@@ -38,7 +38,7 @@ export default function Team() {
       id="equipe"
       className="py-16 overflow-hidden section-gradient-light"
     >
-      <div className="max-w-7xl mx-auto px-container-margin">
+      <div className="max-w-[1300px] mx-auto px-container-margin">
         <SectionHeader
           badge={{ icon: 'groups', text: 'EQUIPE HEALTHMIND' }}
           title="Desenvolvido com dedicação na UNICAP"

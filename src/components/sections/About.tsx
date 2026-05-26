@@ -9,7 +9,7 @@ const ABOUT_PHONE =
 export default function About() {
   return (
     <section id="about" className="py-16 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-container-margin">
+      <div className="max-w-[1300px] mx-auto px-container-margin">
         <div className="flex flex-col lg:flex-row items-center gap-10">
           {/* Visual */}
           <div

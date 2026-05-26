@@ -34,15 +34,15 @@ export function SectionHeader({
           {badge.text}
         </Badge>
       )}
-      <h2
+      <h1
         className={cn(
-          'font-h1 text-h1 font-bold max-w-3xl',
+          'font-h1 text-3xl text-h1 font-bold max-w-3xl',
           dark ? 'text-white' : 'text-on-surface',
           titleClassName,
         )}
       >
         {title}
-      </h2>
+      </h1>
       {description && (
         <p
           className={cn(

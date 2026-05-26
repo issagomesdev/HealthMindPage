@@ -11,7 +11,7 @@ export default function Technology() {
       <div className="absolute left-0 top-1/4 w-64 h-64 bg-primary/15 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute right-0 bottom-1/4 w-64 h-64 bg-secondary/10 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-container-margin relative">
+      <div className="max-w-[1300px] mx-auto px-container-margin relative">
         <SectionHeader
           badge={{ icon: 'code', text: 'TECNOLOGIA & PERFORMANCE' }}
           title="Construído com uma base moderna, segura e escalável"

@@ -19,8 +19,9 @@ const PATIENTS_BREATHING =
 export default function ForPatients() {
   return (
     <section id="for-patients" className="py-16 bg-gradient-to-br from-surface-container-low to-background overflow-hidden">
-      <div className="max-w-7xl mx-auto px-container-margin">
+      <div className="max-w-[1300px] mx-auto px-container-margin">
         {/* Header */}
+        
         <SectionHeader
           badge={{ icon: 'person', text: 'PARA PACIENTES' }}
           title="Autocuidado, acompanhamento emocional e suporte contínuo"
@@ -35,7 +36,7 @@ export default function ForPatients() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-primary/8 rounded-full blur-3xl pointer-events-none" />
 
           {/* Side phones — left */}
-          <div className="absolute left-[0%] md:left-[1%] lg:left-[2%] bottom-0 z-[5] hidden md:block">
+          <div className="absolute left-[0%] md:left-[1%] lg:left-[5%] bottom-0 z-[5] hidden md:block">
             <PhoneMockup
               src={PATIENTS_BREATHING}
               alt="Respiração"
@@ -132,7 +133,7 @@ export default function ForPatients() {
               animationDelay="0.5s"
             />
           </div>
-          <div className="absolute right-[0%] md:right-[1%] lg:right-[2%] bottom-0 z-[5] hidden md:block">
+          <div className="absolute right-[0%] md:right-[1%] lg:right-[5%] bottom-0 z-[5] hidden md:block">
             <PhoneMockup
               src={PATIENTS_GAMIFICATION}
               alt="Gamificação"

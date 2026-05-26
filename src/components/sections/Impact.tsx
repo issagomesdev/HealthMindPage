@@ -4,7 +4,7 @@ import { beforeItems, afterItems, impactPillars } from '@/data/impact'
 export default function Impact() {
   return (
     <section id="impact" className="py-16 bg-surface-container-low overflow-hidden">
-      <div className="max-w-7xl mx-auto px-container-margin">
+      <div className="max-w-[1300px] mx-auto px-container-margin">
         <SectionHeader
           badge={{ icon: 'auto_graph', text: 'IMPACTO DO HEALTHMIND' }}
           title="Uma jornada de cuidado mais clara, acessível e contínua"
@@ -14,8 +14,10 @@ export default function Impact() {
         />
 
         {/* Comparison panel */}
-        <div className="bg-white rounded-[3rem] shadow-xl shadow-primary/5 overflow-hidden mb-12">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr]">
+        <div className="relative bg-white rounded-[3rem] shadow-xl shadow-primary/5 overflow-hidden mb-12">
+          {/* Right-half tint — starts exactly at 50% */}
+          <div className="absolute inset-0 left-1/2 bg-primary/5 pointer-events-none" />
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] relative">
             {/* Before */}
             <div className="p-8 md:p-10">
               <div className="flex items-center gap-3 mb-6">
@@ -62,7 +64,7 @@ export default function Impact() {
             </div>
 
             {/* After */}
-            <div className="p-8 md:p-10 bg-primary/5">
+            <div className="p-8 md:p-10">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 bg-primary/10 text-primary rounded-xl flex items-center justify-center">
                   <span className="material-symbols-outlined text-[20px]">check_circle</span>

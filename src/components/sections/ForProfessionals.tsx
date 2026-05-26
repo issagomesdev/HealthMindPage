@@ -25,7 +25,7 @@ export default function ForProfessionals() {
       <div className="absolute top-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-secondary/10 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-container-margin relative z-10">
+      <div className="max-w-[1300px] mx-auto px-container-margin relative z-10">
         {/* Header */}
         <SectionHeader
           badge={{ icon: 'medical_services', text: 'PARA PROFISSIONAIS' }}
@@ -42,7 +42,7 @@ export default function ForProfessionals() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] bg-primary/8 rounded-full blur-3xl pointer-events-none" />
 
           {/* Schedule phone — far left */}
-          <div className="absolute left-[2%] bottom-0 z-[5] hidden lg:block opacity-85">
+          <div className="absolute left-[5%] bottom-0 z-[5] hidden lg:block opacity-85">
             <PhoneMockup
               src={PROS_SCHEDULE}
               alt="Agenda"
@@ -146,7 +146,7 @@ export default function ForProfessionals() {
           </div>
 
           {/* Levels phone — far right */}
-          <div className="absolute right-[2%] bottom-0 z-[5] hidden lg:block opacity-85">
+          <div className="absolute right-[5%] bottom-0 z-[5] hidden lg:block opacity-85">
             <PhoneMockup
               src={PROS_LEVELS}
               alt="Níveis"

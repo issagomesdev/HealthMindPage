@@ -17,7 +17,7 @@ export default function Hero() {
       <div className="absolute top-1/4 -left-20 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-1/4 -right-20 w-[320px] h-[320px] bg-secondary/10 rounded-full blur-[80px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-container-margin w-full py-8 lg:py-14">
+      <div className="max-w-[1300px] mx-auto px-container-margin w-full py-8 lg:py-14">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-4">
 
           {/* ── Content ── */}
