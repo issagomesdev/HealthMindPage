@@ -18,6 +18,7 @@
   <a href="#componentes">Componentes</a> •
   <a href="#getting-started">Getting Started</a> •
   <a href="#deploy">Deploy</a> •
+  <a href="#team">Equipe</a> •
   <a href="#related-projects">Projetos relacionados</a> •
   <a href="#licenca">Licença</a>
 </p>
@@ -188,13 +189,15 @@ http://localhost:5173
 ### Rodando com Docker em desenvolvimento
 
 ```bash
-docker-compose up --build
+docker compose --env-file .env.development up --build
+
 ```
 
 Em background:
 
 ```bash
-docker-compose up -d --build
+docker compose --env-file .env.development up -d --build
+
 ```
 
 <h2 id="deploy">🚀 Deploy</h2>
@@ -202,8 +205,15 @@ docker-compose up -d --build
 ### Produção com Docker Compose
 
 ```bash
-docker-compose -f docker-compose.prod.yml up --build -d
+docker compose --env-file .env.production -f docker-compose.prod.yml up --build -d
+
+## Após subir o container, confira a porta publicada:
+docker ps
+
+#Exemplo esperado usando APP_PORT=80:
+0.0.0.0:3007->80/tcp
 ```
+
 
 ### Configuração com Nginx
 
@@ -212,10 +222,16 @@ Exemplo de configuração como reverse proxy:
 ```nginx
 server {
     listen 80;
-    server_name seudominio.com.br;
+    server_name healthmind.byissa.dev;
 
     location / {
         proxy_pass http://localhost:80;
+        proxy_http_version 1.1;
+
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
     }
 }
 ```
@@ -226,15 +242,15 @@ server {
 sudo certbot --nginx -d seudominio.com.br
 ```
 
-<h2 id="equipe">👥 Equipe</h2>
+<h2 id="team">👥 Equipe</h2>
 
-| Nome | Papel |
-|---|---|
-| Hayssa Gomes | Desenvolvimento Front-end & Produto |
-| Vitoria Inacia | Produto, Pesquisa & Experiência |
-| Kelvson Nilson | Desenvolvimento & Solução Técnica |
-| Leticia Oliveira | Pesquisa, Estratégia & Experiência |
-| Arthur Santo | Produto, Tecnologia & Apresentação |
+| Nome | Papel | LinkedIn |
+|---|---|---|
+| Hayssa Gomes | Desenvolvimento Front-end & Produto | [LinkedIn](https://www.linkedin.com/in/issagomesdev) |
+| Vitoria Inacia | Produto, Pesquisa & Experiência | [LinkedIn](https://www.linkedin.com/in/vitoria-inacia-0a1086250) |
+| Kelvson Nilson | Desenvolvimento & Solução Técnica | [LinkedIn](https://www.linkedin.com/in/kelvson-nilson-129751286/) |
+| Leticia Oliveira | Pesquisa, Estratégia & Experiência | [LinkedIn](https://www.linkedin.com/in/-leticiaoliveira/) |
+| Arthur Santo | Produto, Tecnologia & Apresentação | [LinkedIn](https://www.linkedin.com/in/arthur-santo-b8651a2b6/) |
 
 <h2 id="related-projects">🔗 Projetos relacionados</h2>
 
