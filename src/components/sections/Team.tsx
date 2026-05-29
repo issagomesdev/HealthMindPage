@@ -35,7 +35,7 @@ export default function Team() {
 
   return (
     <section
-      id="equipe"
+      id="team"
       className="py-16 overflow-hidden section-gradient-light scroll-mt-[60px]"
     >
       <div className="max-w-[1300px] mx-auto px-container-margin">

@@ -19,24 +19,28 @@ export default function About() {
             <div className="relative z-10">
               <PhoneMockup src={ABOUT_PHONE} alt="HealthMind sobre o projeto" size="xl" glowClass="bg-primary-fixed/15" />
 
-              {/* TOP cards: left-0 / right-0 mobile */}
+              {/* Check-in */}
               <FloatingWidget icon="mood" title="Como você está hoje?" subtitle="Check-in diário"
                 variant="light"
-                className="flex -left-12 sm:-left-16 md:-left-40 -top-6 md:top-12"
-                animationDelay="0s" animationDuration="6s" />
+                className="flex -left-10 top-[30%]"
+                animationDelay="0.5s" animationDuration="6s" />
+
+              {/* Sessão agendada */}
               <FloatingWidget icon="psychology" title="Sessão agendada" subtitle="Amanhã às 14h"
                 variant="primary"
                 className="flex -right-10 sm:-right-16 md:-right-32 top-16 md:top-24"
                 animationDelay="1s" animationDuration="7s" />
 
-              {/* BOTTOM cards: left-2 / right-2 mobile */}
+              {/* Evolução */}
               <FloatingWidget icon="trending_up" title="Evolução +12%" subtitle="Esta semana"
                 variant="secondary"
-                className="flex -left-10 sm:-left-16 md:-left-28 bottom-12 md:bottom-20"
+                className="flex -left-8 sm:-left-16 top-[40%] md:top-[38%]"
                 animationDelay="1.5s" animationDuration="6.5s" />
+
+              {/* Segurança */}
               <FloatingWidget icon="lock" title="100% Seguro" subtitle="Dados criptografados"
                 variant="light"
-                className="flex -right-6 sm:-right-12 md:-right-28 bottom-4 md:bottom-10"
+                className="flex -right-6 sm:-right-12 md:-right-28 bottom-14"
                 animationDelay="0.5s" animationDuration="8s" />
             </div>
           </div>

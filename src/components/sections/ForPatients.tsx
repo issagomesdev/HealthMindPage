@@ -4,11 +4,11 @@ import { FloatingWidget } from '@/components/ui/FloatingWidget'
 import { PhoneMockup } from '@/components/ui/PhoneMockup'
 import { patientFeatures } from '@/data/patients'
 
-const PATIENTS_CENTER      = '/images/mockups/patient/home.png'
+const PATIENTS_CENTER = '/images/mockups/patient/home.png'
 const PATIENTS_GAMIFICATION = '/images/mockups/patient/levels.png'
-const PATIENTS_CHECKIN     = '/images/mockups/patient/checkin.png'
-const PATIENTS_COMMUNITY   = '/images/mockups/patient/new_post.png'
-const PATIENTS_BREATHING   = '/images/mockups/patient/breathing.png'
+const PATIENTS_CHECKIN = '/images/mockups/patient/checkin.png'
+const PATIENTS_COMMUNITY = '/images/mockups/patient/new_post.png'
+const PATIENTS_BREATHING = '/images/mockups/patient/breathing.png'
 
 export default function ForPatients() {
   return (
@@ -37,32 +37,40 @@ export default function ForPatients() {
           <div className="relative z-20">
             <PhoneMockup src={PATIENTS_CENTER} alt="HealthMind para pacientes" size="xl" glowClass="bg-primary/20" />
 
-            {/* TOP cards */}
+            {/* como você está? */}
             <FloatingWidget icon="mood" title="Como você está?" subtitle="Check-in diário"
               variant="light"
-              className="flex -left-20 sm:-left-24 md:-left-36 top-4 sm:top-6 md:top-8"
-              animationDelay="0s" animationDuration="6s" />
+              className="flex -left-10 sm:-left-30 md:-left-30 top-[19%] sm:top-[20%] md:top-40"
+              animationDelay="1s" animationDuration="6s" />
+
+            {/* ganhos */}
             <FloatingWidget icon="stars" title="+50 XP ganhos!" subtitle="Nível 5 desbloqueado"
               variant="primary"
-              className="flex right-0 sm:-right-16 md:-right-32 top-10 md:top-16"
+              className="flex right-0 sm:-right-16 md:-right-32 top-[12%] md:top-16"
               animationDelay="1s" animationDuration="7s" />
+
+            {/* meditação */}
             <FloatingWidget icon="spa" title="Meditação concluída" subtitle="10 minutos"
               variant="light"
-              className="flex right-0 sm:-right-20 md:-right-36 -top-2"
+              className="flex -right-10 sm:-right-20 md:-right-36 bottom-[36%] md:bottom-[31%]"
               animationDelay="0.8s" animationDuration="9s" />
 
-            {/* BOTTOM cards */}
-            <FloatingWidget icon="auto_stories" title="Diário atualizado" subtitle="Há 2 horas"
-              variant="light"
-              className="flex left-2 sm:-left-16 md:-left-32 bottom-20 sm:bottom-16 md:bottom-24"
-              animationDelay="1.5s" animationDuration="8s" />
+            {/* próxima consulta */}
             <FloatingWidget icon="calendar_today" title="Próxima consulta" subtitle="Sexta às 15h"
               variant="secondary"
-              className="flex right-2 sm:-right-12 md:-right-28 bottom-8 md:bottom-16"
+              className="flex -right-10 sm:-right-12 md:-right-28 bottom-40"
               animationDelay="0.5s" animationDuration="6.5s" />
+
+            {/* diário */}
+            <FloatingWidget icon="auto_stories" title="Diário atualizado" subtitle="Há 2 horas"
+              variant="light"
+              className="flex left-2 sm:-left-16 md:-left-32 bottom-[16%] sm:bottom-16 md:bottom-[11%]"
+              animationDelay="1.5s" animationDuration="8s" />
+
+            {/* insights */}
             <FloatingWidget icon="insights" title="Semana positiva!" subtitle="Humor médio: 8.2"
               variant="light"
-              className="flex left-2 sm:-left-28 md:-left-40 bottom-4"
+              className="flex -left-5 sm:-left-28 md:-left-40 bottom-10 sm:bottom-4"
               animationDelay="2s" animationDuration="7.5s" />
           </div>
 

@@ -4,11 +4,11 @@ import { FloatingWidget } from '@/components/ui/FloatingWidget'
 import { PhoneMockup } from '@/components/ui/PhoneMockup'
 import { professionalFeatures } from '@/data/professionals'
 
-const PROS_SCHEDULE  = '/images/mockups/professional/schedule.png'
-const PROS_REPORTS   = '/images/mockups/professional/reports.png'
+const PROS_SCHEDULE = '/images/mockups/professional/schedule.png'
+const PROS_REPORTS = '/images/mockups/professional/reports.png'
 const PROS_EVOLUTION = '/images/mockups/professional/evolution.png'
 const PROS_DASHBOARD = '/images/mockups/professional/home.png'
-const PROS_LEVELS    = '/images/mockups/professional/levels.png'
+const PROS_LEVELS = '/images/mockups/professional/levels.png'
 
 export default function ForProfessionals() {
   return (
@@ -42,33 +42,41 @@ export default function ForProfessionals() {
           <div className="relative z-20">
             <PhoneMockup src={PROS_DASHBOARD} alt="Dashboard profissional" size="xl" frameVariant="dark" glowClass="bg-primary/15" />
 
-            {/* TOP cards */}
+            {/* pacientes ativos */}
             <FloatingWidget icon="groups" title="28 pacientes ativos"
               variant="dark"
-              className="flex -left-20 sm:-left-24 md:-left-36 top-4 sm:top-6 md:top-8"
-              animationDelay="0s" animationDuration="6s" />
-            <FloatingWidget icon="calendar_today" title="5 consultas hoje" subtitle="Próxima às 14h"
-              variant="primary"
-              className="flex -right-20 sm:-right-16 md:-right-32 top-10 md:top-16"
-              animationDelay="1s" animationDuration="7s" />
+              className="flex -left-4 sm:-left-20 top-20 md:top-28"
+              animationDelay="0.5s" animationDuration="6s" />
+
+            {/* consulta confirmada */}
             <FloatingWidget icon="check_circle" title="Consulta confirmada" subtitle="João A. — 16h"
               variant="secondary"
-              className="flex -right-20 sm:-right-20 md:-right-36 -top-2"
+              className="flex -right-6 sm:-right-20 md:-right-36 top-[43%] sm:top-[40%] md:top-[42%]"
               animationDelay="0.8s" animationDuration="9s" />
 
-            {/* BOTTOM cards */}
+            {/* consultas hoje */}
+            <FloatingWidget icon="calendar_today" title="5 consultas hoje" subtitle="Próxima às 14h"
+              variant="primary"
+              className="flex -right-8 sm:-right-[32%] top-[35%] sm:top-1/2"
+              animationDelay="1s" animationDuration="7s" />
+
+            {/* novos alertas */}
             <FloatingWidget icon="notifications" title="3 novos alertas" subtitle="Check-ins recebidos"
               variant="dark"
-              className="flex left-2 sm:-left-16 md:-left-32 bottom-20 md:bottom-28"
+              className="flex -left-6 sm:-left-16 md:-left-32 bottom-28 sm:bottom-32 md:bottom-40"
               animationDelay="1.5s" animationDuration="8s" />
-            <FloatingWidget icon="insights" title="Relatório semanal" subtitle="Disponível agora"
-              variant="dark"
-              className="flex right-2 sm:-right-16 md:-right-32 bottom-12 md:bottom-20"
-              animationDelay="0.5s" animationDuration="6.5s" />
+
+            {/* prontuário atualizado */}
             <FloatingWidget icon="folder_shared" title="Prontuário atualizado" subtitle="Maria S."
               variant="dark"
-              className="flex left-2 sm:-left-28 md:-left-40 bottom-4"
+              className=" -left-6 md:-left-40 bottom-16 md:bottom-24"
               animationDelay="2s" animationDuration="7.5s" />
+
+            {/* relatório semanal */}
+            <FloatingWidget icon="insights" title="Relatório semanal" subtitle="Disponível agora"
+              variant="dark"
+              className="flex -right-8 sm:-right-16 md:-right-32 bottom-40 md:bottom-20"
+              animationDelay="0.5s" animationDuration="6.5s" />
           </div>
 
           {/* Right inner */}

@@ -3,8 +3,8 @@ import { FloatingWidget } from '@/components/ui/FloatingWidget'
 import { PhoneMockup } from '@/components/ui/PhoneMockup'
 
 const HERO_CENTER = '/images/mockups/professional/home.png'
-const HERO_LEFT   = '/images/mockups/professional/levels.png'
-const HERO_RIGHT  = '/images/mockups/community.png'
+const HERO_LEFT = '/images/mockups/professional/levels.png'
+const HERO_RIGHT = '/images/mockups/community.png'
 
 export default function Hero() {
   const downloadUrl = import.meta.env.VITE_APP_DOWNLOAD_URL as string
@@ -29,7 +29,7 @@ export default function Hero() {
             </h1>
             <p className="text-body-lg text-on-surface-variant max-w-xl mx-auto lg:mx-0 leading-relaxed">
               Uma plataforma mobile que torna o cuidado emocional mais acessível, organizado e
-              humanizado — para pacientes e profissionais de saúde mental.
+              humanizado, para pacientes e profissionais de saúde mental.
             </p>
             <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
               <Button href={downloadUrl} variant="primary" size="lg">
@@ -65,29 +65,35 @@ export default function Hero() {
             <div className="relative z-20">
               <PhoneMockup src={HERO_CENTER} alt="HealthMind — tela principal" size="xl" glowClass="bg-primary/20" />
 
-              {/* TOP cards: left-0 / right-0 mobile → borda do phone, não sobre a tela */}
+              {/* Agenda */}
               <FloatingWidget icon="calendar_today" title="Agenda inteligente" subtitle="3 consultas hoje"
                 variant="light"
-                className="flex -left-11 sm:-left-40 md:-left-40 -top-5 sm:top-8 md:top-10"
+                className="flex -left-10 sm:-left-40 md:-left-40 top-20 sm:top-8 md:top-10"
                 animationDelay="0.5s" animationDuration="6s" />
-              <FloatingWidget icon="check_circle" title="Check-in concluído" subtitle="Hoje às 08:30"
-                variant="primary"
-                className="flex -right-10 sm:-right-16 md:-right-32 top-12 md:top-16"
-                animationDelay="1s" animationDuration="7s" />
-              <FloatingWidget icon="schedule" title="Consulta em 15 min"
-                variant="light"
-                className="flex -left-11 sm:-left-20 md:-left-32 top-1/2 -translate-y-1/2"
-                animationDelay="1.5s" animationDuration="8s" />
 
-              {/* BOTTOM cards: left-2 / right-2 mobile → sobreposição inferior ok */}
+              {/* Conquistas */}
               <FloatingWidget icon="stars" title="+30 XP" subtitle="Conquista desbloqueada!"
                 variant="secondary"
-                className="flex -right-10 sm:-right-20 md:-right-36 bottom-28 md:bottom-28"
+                className="flex -right-10 sm:-right-20 md:-right-36 top-[60%] md:top-1/2"
                 animationDelay="2s" animationDuration="6.5s" />
+
+              {/* Check-in */}
+              <FloatingWidget icon="check_circle" title="Check-in concluído" subtitle="Hoje às 08:30"
+                variant="primary"
+                className="flex -right-10 sm:-right-16 md:-right-30 top-[5%] md:top-[42%]"
+                animationDelay="1s" animationDuration="7s" />
+
+              {/* Consulta */}
+              <FloatingWidget icon="schedule" title="Consulta em 15 min"
+                variant="light"
+                className="flex -left-10 md:-left-32 bottom-[18%]"
+                animationDelay="0.5s" animationDuration="8s" />
+
+              {/* Dashboard */}
               <FloatingWidget icon="dashboard" title="Dashboard personalizado"
                 variant="light"
-                className="flex -left-11 sm:-left-32 md:-left-40 bottom-14 md:bottom-16"
-                animationDelay="0.8s" animationDuration="7.5s" />
+                className="flex -left-8 sm:-left-32 md:-left-40 bottom-16 md:bottom-16"
+                animationDelay="1s" animationDuration="7.5s" />
             </div>
           </div>
 

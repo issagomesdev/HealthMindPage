@@ -5,8 +5,8 @@ import { Modal } from '@/components/ui/Modal'
 
 type ModalId = 'privacy' | 'terms' | 'contact' | null
 
-function scrollToEquipe() {
-  const el = document.getElementById('equipe')
+function scrollToTeam() {
+  const el = document.getElementById('team')
   if (!el) return
   const top = el.getBoundingClientRect().top + window.scrollY - 56 - 8
   window.scrollTo({ top, behavior: 'smooth' })
@@ -233,7 +233,7 @@ export default function Footer() {
           <button
             onClick={() => {
               close()
-              setTimeout(() => scrollToEquipe(), 150)
+              setTimeout(() => scrollToTeam(), 150)
             }}
             className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-primary text-on-primary font-semibold text-body-md hover:opacity-90 transition-opacity duration-200 border-none cursor-pointer self-start"
           >

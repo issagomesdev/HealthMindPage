@@ -32,7 +32,7 @@ export const aboutFeatures: AboutFeature[] = [
   },
   {
     icon: 'devices',
-    title: 'Multiplataforma',
-    description: 'Disponível em Android e iOS, garantindo acesso ao cuidado emocional na palma da mão, onde e quando precisar.',
+    title: 'Expansão multiplataforma',
+    description: 'Disponível inicialmente para Android, com estrutura preparada para futuras versões em iOS e web, levando o cuidado emocional para mais pessoas e contextos.',
   },
 ]

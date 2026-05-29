@@ -119,7 +119,7 @@ export default function AppHighlights() {
               <div
                 key={card.title}
                 className={cn(
-                  'snap-start flex-shrink-0 w-[260px] md:w-[300px] glass-card rounded-3xl p-5 flex flex-col gap-4 transition-all duration-300 cursor-pointer',
+                  'snap-start flex-shrink-0 w-[260px] md:w-[300px] glass-card rounded-3xl py-5 px-10 flex flex-col gap-4 transition-all duration-300 cursor-pointer',
                   index === currentIndex ? 'ring-2 ring-primary/50' : '',
                 )}
                 style={{

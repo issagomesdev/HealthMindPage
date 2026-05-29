@@ -39,10 +39,10 @@ export const navLinks: NavLink[] = [
     activeIds: ['impact', 'technology'],
   },
   {
-    id: 'equipe',
+    id: 'team',
     label: 'Equipe',
-    href: '#equipe',
-    activeIds: ['equipe'],
+    href: '#team',
+    activeIds: ['team'],
   },
 ]
 
@@ -57,7 +57,7 @@ export const observedSectionIds = [
   'for-professionals',
   'impact',
   'technology',
-  'equipe',
+  'team',
 ] as const
 
 export interface FooterNavLink {
@@ -72,7 +72,7 @@ export const footerNavLinks: FooterNavLink[] = [
   { id: 'for-patients',     label: 'Para Pacientes',     href: '#for-patients' },
   { id: 'for-professionals',label: 'Para Profissionais', href: '#for-professionals' },
   { id: 'technology',       label: 'Tecnologia',         href: '#technology' },
-  { id: 'equipe',           label: 'Equipe',             href: '#equipe' },
+  { id: 'team',             label: 'Equipe',             href: '#team' },
 ]
 
 export const footerResourceLinks: FooterNavLink[] = [

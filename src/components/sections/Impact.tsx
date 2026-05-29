@@ -16,7 +16,7 @@ export default function Impact() {
         {/* Comparison panel */}
         <div className="relative bg-white rounded-[3rem] shadow-xl shadow-primary/5 overflow-hidden mb-12">
           {/* Right-half tint — starts exactly at 50% */}
-          <div className="absolute inset-0 left-1/2 bg-primary/5 pointer-events-none" />
+          <div className="absolute inset-0 top-[50%] left-0 md:top-0 md:left-1/2 bg-primary/5 pointer-events-none" />
           <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] relative">
             {/* Before */}
             <div className="p-8 md:p-10">
@@ -55,8 +55,8 @@ export default function Impact() {
             </div>
 
             {/* Mobile connector */}
-            <div className="md:hidden flex items-center justify-center py-6 border-t border-outline-variant/30">
-              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-lg shadow-primary/30">
+            <div className="md:hidden flex items-center justify-center border-t border-outline-variant/30">
+              <div className="w-12 h-12 absolute bg-primary rounded-full flex items-center justify-center shadow-lg shadow-primary/30">
                 <span className="material-symbols-outlined text-white text-[22px]">
                   arrow_downward
                 </span>
