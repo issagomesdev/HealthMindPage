@@ -222,7 +222,7 @@ Exemplo de configuração como reverse proxy:
 ```nginx
 server {
     listen 80;
-    server_name url.byissa.dev;
+    server_name url.com.br;
 
     location / {
         proxy_pass http://localhost:80;
