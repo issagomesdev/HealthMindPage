@@ -53,10 +53,7 @@ export default function About() {
                 Cuidado Humanizado & Acessível
               </h2>
               <p className="text-body-lg text-on-surface-variant leading-relaxed">
-                O HealthMind nasceu da necessidade real de tornar o cuidado com a saúde mental mais
-                próximo, organizado e humano. Desenvolvido como projeto acadêmico na UNICAP, une
-                tecnologia moderna com design empático para criar uma experiência que realmente
-                importa.
+               O HealthMind nasceu com o propósito de tornar o cuidado com a saúde mental mais acessível, próximo e humano. Desenvolvido durante o Hackathon da 1ª Jornada de Tecnologia da UNICAP, o projeto conquistou o 1º lugar ao unir tecnologia moderna, design empático e impacto social em uma solução que conecta pacientes e profissionais de forma simples, organizada e acolhedora.
               </p>
             </div>
             <div className="grid grid-cols-1 gap-4">
