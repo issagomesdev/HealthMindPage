@@ -1,4 +1,5 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import Preloader from '@/components/ui/Preloader'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import Hero from '@/components/sections/Hero'
@@ -13,6 +14,8 @@ import Technology from '@/components/sections/Technology'
 import Team from '@/components/sections/Team'
 
 function App() {
+  const [preloaderDone, setPreloaderDone] = useState(false)
+
   useEffect(() => {
     // Disable smooth scroll temporarily so the reset is instant
     document.documentElement.style.scrollBehavior = 'auto'
@@ -29,6 +32,9 @@ function App() {
 
   return (
     <>
+      {!preloaderDone && (
+        <Preloader onComplete={() => setPreloaderDone(true)} />
+      )}
       <Header />
       <main>
         <Hero />
