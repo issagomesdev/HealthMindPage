@@ -6,15 +6,20 @@ const HERO_CENTER = '/images/mockups/professional/home.png'
 const HERO_LEFT = '/images/mockups/professional/levels.png'
 const HERO_RIGHT = '/images/mockups/community.png'
 
+// Content-driven height: scales with viewport on short/medium screens, caps on tall ones
+// so the section ends shortly after the mockups instead of leaving empty space above the fold.
+const HERO_MIN_HEIGHT = 'min-h-[clamp(560px,85vh,740px)]'
+const MOCKUP_CLUSTER_MIN_HEIGHT = 'min-h-[440px] sm:min-h-[500px] lg:min-h-[560px]'
+
 export default function Hero() {
   const downloadUrl = import.meta.env.VITE_APP_DOWNLOAD_URL as string
 
   return (
-    <section className="relative min-h-[88vh] flex items-center overflow-hidden bg-gradient-to-br from-surface-container-low via-background to-surface-container-low pt-16">
+    <section className={`relative ${HERO_MIN_HEIGHT} flex items-center overflow-hidden bg-gradient-to-br from-surface-container-low via-background to-surface-container-low pt-16`}>
       <div className="absolute top-1/4 -left-20 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-1/4 -right-20 w-[320px] h-[320px] bg-secondary/10 rounded-full blur-[80px] pointer-events-none" />
 
-      <div className="max-w-[1300px] mx-auto px-container-margin w-full py-8 lg:py-14">
+      <div className="max-w-[1300px] mx-auto px-container-margin w-full py-8 lg:py-12">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-4">
 
           {/* ── Content ── */}
@@ -52,7 +57,7 @@ export default function Hero() {
           </div>
 
           {/* ── Mockup cluster ── */}
-          <div className="lg:w-[52%] relative flex items-center justify-center" style={{ minHeight: '560px' }}>
+          <div className={`lg:w-[52%] relative flex items-center justify-center ${MOCKUP_CLUSTER_MIN_HEIGHT}`}>
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] h-[340px] bg-primary/12 rounded-full blur-[80px] pointer-events-none" />
 
             <div className="absolute left-[-70%] lg:left-[2%] md:left-[-80%] bottom-8 z-10 hidden sm:block opacity-90">
