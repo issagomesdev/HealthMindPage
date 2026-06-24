@@ -10,7 +10,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: 'Hayssa Gomes',
     initials: 'HG',
-    role: 'Desenvolvimento Front-end & Produto',
+    role: 'Desenvolvimento Mobile, FullStack & Produto',
     linkedIn: 'https://www.linkedin.com/in/issagomesdev',
     color: 'primary',
   },
