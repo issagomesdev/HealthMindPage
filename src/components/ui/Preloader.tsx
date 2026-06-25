@@ -84,7 +84,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
       >
         {/* Logo icon */}
         <img
-          src="/logo/white.png"
+          src="/logo/white.webp"
           alt="HealthMind"
           className="w-40 h-40 object-contain"
           style={{ animation: 'float-slow 6s ease-in-out infinite' }}

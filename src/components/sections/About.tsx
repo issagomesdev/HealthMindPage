@@ -3,7 +3,7 @@ import { FloatingWidget } from '@/components/ui/FloatingWidget'
 import { PhoneMockup } from '@/components/ui/PhoneMockup'
 import { aboutFeatures } from '@/data/about'
 
-const ABOUT_PHONE = '/images/mockups/professional/message.png'
+const ABOUT_PHONE = '/images/mockups/professional/message.webp'
 
 export default function About() {
   return (

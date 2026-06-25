@@ -7,7 +7,7 @@
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Status](https://img.shields.io/badge/status-em_desenvolvimento-yellow?style=for-the-badge)
 
-![Preview do site](https://media.byissa.dev/healthmind/site_preview.png)
+![Preview do site](https://media.byissa.dev/healthmind/site_preview.webp)
 
 <p align="center">
   <a href="#sobre">Sobre</a> •

@@ -27,7 +27,7 @@ export default function Footer() {
             <div className="lg:col-span-1 flex flex-col gap-5">
               <a href="#" className="flex items-center gap-2 no-underline group w-fit">
                 <div className="w-9 h-9 bg-primary rounded-xl flex items-center justify-center shadow-md overflow-hidden">
-                  <img src="/logo/white-w-green.png" alt="HealthMind logo" className="w-full h-full object-contain p-0.5" />
+                  <img src="/logo/white-w-green.webp" alt="HealthMind logo" className="w-full h-full object-contain p-0.5" />
                 </div>
                 <span className="font-h1 font-bold text-xl text-on-surface">HealthMind</span>
               </a>

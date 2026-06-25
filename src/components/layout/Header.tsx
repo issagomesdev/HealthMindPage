@@ -25,7 +25,7 @@ export default function Header() {
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 no-underline group">
           <div className="w-9 h-9 bg-primary rounded-xl flex items-center justify-center shadow-md group-hover:shadow-primary/40 transition-shadow duration-300 overflow-hidden">
-            <img src="/logo/white-w-green.png" alt="HealthMind logo" className="w-full h-full object-contain p-0.5" />
+            <img src="/logo/white-w-green.webp" alt="HealthMind logo" className="w-full h-full object-contain p-0.5" />
           </div>
           <span className="font-h1 font-bold text-xl text-on-surface tracking-tight">
             HealthMind

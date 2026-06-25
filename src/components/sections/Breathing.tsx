@@ -3,7 +3,7 @@ import { FloatingWidget } from '@/components/ui/FloatingWidget'
 import { PhoneMockup } from '@/components/ui/PhoneMockup'
 import { breathingFeatures } from '@/data/breathing'
 
-const BREATHING_PHONE = '/images/mockups/breathing.png'
+const BREATHING_PHONE = '/images/mockups/breathing.webp'
 
 export default function Breathing() {
   return (

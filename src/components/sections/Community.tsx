@@ -2,7 +2,7 @@ import { Badge } from '@/components/ui/Badge'
 import { FloatingWidget } from '@/components/ui/FloatingWidget'
 import { PhoneMockup } from '@/components/ui/PhoneMockup'
 
-const COMMUNITY_PHONE = '/images/mockups/community.png'
+const COMMUNITY_PHONE = '/images/mockups/community.webp'
 
 export default function Community() {
   return (

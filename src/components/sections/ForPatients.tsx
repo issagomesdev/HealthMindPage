@@ -4,11 +4,11 @@ import { FloatingWidget } from '@/components/ui/FloatingWidget'
 import { PhoneMockup } from '@/components/ui/PhoneMockup'
 import { patientFeatures } from '@/data/patients'
 
-const PATIENTS_CENTER = '/images/mockups/patient/home.png'
-const PATIENTS_GAMIFICATION = '/images/mockups/patient/levels.png'
-const PATIENTS_CHECKIN = '/images/mockups/patient/checkin.png'
-const PATIENTS_COMMUNITY = '/images/mockups/patient/new_post.png'
-const PATIENTS_BREATHING = '/images/mockups/patient/breathing.png'
+const PATIENTS_CENTER = '/images/mockups/patient/home.webp'
+const PATIENTS_GAMIFICATION = '/images/mockups/patient/levels.webp'
+const PATIENTS_CHECKIN = '/images/mockups/patient/checkin.webp'
+const PATIENTS_COMMUNITY = '/images/mockups/patient/new_post.webp'
+const PATIENTS_BREATHING = '/images/mockups/patient/breathing.webp'
 
 export default function ForPatients() {
   return (

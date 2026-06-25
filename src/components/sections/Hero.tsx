@@ -2,9 +2,9 @@ import { Button } from '@/components/ui/Button'
 import { FloatingWidget } from '@/components/ui/FloatingWidget'
 import { PhoneMockup } from '@/components/ui/PhoneMockup'
 
-const HERO_CENTER = '/images/mockups/professional/home.png'
-const HERO_LEFT = '/images/mockups/professional/levels.png'
-const HERO_RIGHT = '/images/mockups/community.png'
+const HERO_CENTER = '/images/mockups/professional/home.webp'
+const HERO_LEFT = '/images/mockups/professional/levels.webp'
+const HERO_RIGHT = '/images/mockups/community.webp'
 
 // Content-driven height: scales with viewport on short/medium screens, caps on tall ones
 // so the section ends shortly after the mockups instead of leaving empty space above the fold.

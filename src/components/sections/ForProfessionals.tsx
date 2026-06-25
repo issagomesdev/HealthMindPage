@@ -4,11 +4,11 @@ import { FloatingWidget } from '@/components/ui/FloatingWidget'
 import { PhoneMockup } from '@/components/ui/PhoneMockup'
 import { professionalFeatures } from '@/data/professionals'
 
-const PROS_SCHEDULE = '/images/mockups/professional/schedule.png'
-const PROS_REPORTS = '/images/mockups/professional/reports.png'
-const PROS_EVOLUTION = '/images/mockups/professional/evolution.png'
-const PROS_DASHBOARD = '/images/mockups/professional/home.png'
-const PROS_LEVELS = '/images/mockups/professional/levels.png'
+const PROS_SCHEDULE = '/images/mockups/professional/schedule.webp'
+const PROS_REPORTS = '/images/mockups/professional/reports.webp'
+const PROS_EVOLUTION = '/images/mockups/professional/evolution.webp'
+const PROS_DASHBOARD = '/images/mockups/professional/home.webp'
+const PROS_LEVELS = '/images/mockups/professional/levels.webp'
 
 export default function ForProfessionals() {
   return (
